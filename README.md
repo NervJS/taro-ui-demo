@@ -1,20 +1,6 @@
-# Taro UI
+# Taro UI Demo
 
-[![NPM][npm-version-image]][npm-version-url] [![david-dm][david-dm-image]][david-dm-url]
-
-一款基于 `Taro` 框架开发的多端 UI 组件库
-
-## 特性
-
-- 基于 `Taro` 开发 UI 组件
-- 一套组件可以在 `微信小程序`，`H5`，`ReactNative` 等多端适配运行
-- 提供友好的 API，可灵活的使用组件
-
-## 关于 Taro
-
-Taro 是由 [京东·凹凸实验室](https://aotu.io) 倾力打造的多端开发解决方案。现如今市面上端的形态多种多样，Web、ReactNative、微信小程序等各种端大行其道，当业务要求同时在不同的端都要求有所表现的时候，针对不同的端去编写多套代码的成本显然非常高，这时候只编写一套代码就能够适配到多端的能力就显得极为需要。
-
-使用 Taro，我们可以只书写一套代码，再通过 Taro 的编译工具，将源代码分别编译出可以在不同端（微信小程序、H5、RN等）运行的代码。
+`Taro UI` 示例库
 
 ## 体验
 
@@ -35,30 +21,41 @@ Taro 是由 [京东·凹凸实验室](https://aotu.io) 倾力打造的多端开�
 npm install -g @tarojs/cli
 ```
 
-然后在项目中安装 Taro UI
+下载项目并安装依赖
 
 ```bash
-npm install taro-ui
+git clone https://github.com/NervJS/taro-ui-demo
+cd taro-ui-demo
+npm i
 ```
 
-## 使用
+## 编译并预览
 
-在代码中 `import` 需要的组件并按照文档说明使用
+进入项目目录开始开发，可以选择小程序预览模式，或者 h5 预览模式，若使用微信小程序预览模式，则需要自行下载并打开微信开发者工具，选择预览项目根目录。
 
-```js
-import { AtButton } from 'taro-ui'
+**微信小程序编译预览模式**
+
+```bash
+# npm script
+$ npm run dev:weapp
+# 仅限全局安装
+$ taro build --type weapp --watch
+# npx用户也可以使用
+$ npx taro build --type weapp --watch
 ```
 
-## 贡献
+**H5 编译预览模式**
 
-如果你在使用 `Taro UI` 时遇到问题，或者有好的建议，欢迎给我们提 `Issue` 或 `Pull Request`。在开始之前，请阅读 [贡献指南](https://github.com/NervJS/taro-ui/blob/master/.github/CONTRIBUTING.md)
+```bash
+# npm script
+$ npm run dev:h5
+# 仅限全局安装
+$ taro build --type h5 --watch
+# npx用户也可以使用
+$ npx taro build --type h5 --watch
+```
+
 
 ## License
 
 MIT
-
-
-[npm-version-image]: https://img.shields.io/npm/v/taro-ui.svg?style=flat-square
-[npm-version-url]: https://www.npmjs.com/package/taro-ui
-[david-dm-image]: https://david-dm.org/NervJS/taro-ui.svg?style=flat-square
-[david-dm-url]: https://david-dm.org/NervJS/taro-ui
