@@ -3,7 +3,6 @@ import { View } from '@tarojs/components'
 import { ActivityIndicator } from 'taro-ui'
 
 import DocsHeader from '../../components/doc-header'
-
 import './index.scss'
 
 export default class ActivityIndicatorPage extends Taro.Component {

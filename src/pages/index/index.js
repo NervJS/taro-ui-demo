@@ -55,7 +55,7 @@ export default class Index extends Taro.Component {
         {
           id: 'Navigation',
           title: '导航',
-          content: '包含标签栏、导航栏、时间轴等',
+          content: '包含标签栏、导航栏等',
           icon: iconNavigation
         }
       ]
@@ -104,7 +104,7 @@ export default class Index extends Taro.Component {
                 <View className='content'>{item.content}</View>
               </View>
               <View className='module-list__arrow'>
-                <AtIcon type='chevron-right' />
+                <AtIcon value='chevron-right' />
               </View>
             </View>
           ))}

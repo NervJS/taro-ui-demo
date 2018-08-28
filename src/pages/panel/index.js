@@ -241,7 +241,7 @@ export default class PanelBasic extends Component {
                 onClick={this.gotoComponent}
               >
                 <Text className='name'>{`${item.id} ${item.name}`}</Text>
-                <AtIcon type='chevron-right' />
+                <AtIcon value='chevron-right' />
               </View>
             ))}
           </View>
