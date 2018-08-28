@@ -1,0 +1,46 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "taro ui demo",
+  "main": "index.js",
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:h5": "taro build --type h5",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tarojs/components": "^1.0.0-beta.15",
+    "@tarojs/router": "^1.0.0-beta.15",
+    "@tarojs/taro": "^1.0.0-beta.15",
+    "@tarojs/taro-h5": "^1.0.0-beta.15",
+    "@tarojs/taro-weapp": "^1.0.0-beta.15",
+    "nervjs": "^1.3.0",
+    "taro-ui": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "16.3.14",
+    "@types/webpack-env": "^1.13.6",
+    "@tarojs/cli": "^1.0.0-beta.15",
+    "@tarojs/plugin-babel": "^1.0.0-beta.15",
+    "@tarojs/plugin-csso": "^1.0.0-beta.15",
+    "@tarojs/plugin-sass": "^1.0.0-beta.15",
+    "@tarojs/plugin-uglifyjs": "^1.0.0-beta.15",
+    "@tarojs/webpack-runner": "^1.0.0-beta.15",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-taro": "^1.0.0-beta.15",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-taro": "^1.0.0-beta.15"
+  }
+}

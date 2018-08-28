@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+.vscode/
+.nyc_output/
+git_stats/
+yarn-offline/
+docs/
+jest.config.js
+__mock__/

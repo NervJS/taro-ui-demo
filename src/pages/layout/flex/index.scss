@@ -1,0 +1,18 @@
+.flex-page .at-row {
+  margin-bottom: 40px;
+
+  .at-col {
+    padding: 18px 16px;
+    color: #FFF;
+    font-size: 28px;
+    text-align: center;
+
+    &:nth-child(odd) {
+      background-color: #78A4F4;
+    }
+
+    &:nth-child(even) {
+      background-color: #CCC;
+    }
+  }
+}

@@ -1,0 +1,253 @@
+import Taro, { Component } from '@tarojs/taro'
+import { View, Text, Image } from '@tarojs/components'
+import { AtIcon } from 'taro-ui'
+
+import iconBasic from '../../assets/images/icon-list-basic.png'
+import iconView from '../../assets/images/icon-list-view.png'
+import iconAction from '../../assets/images/icon-list-action.png'
+import iconForm from '../../assets/images/icon-list-form.png'
+import iconLayout from '../../assets/images/icon-list-layout.png'
+import iconNavigation from '../../assets/images/icon-list-navigation.png'
+
+import './index.scss'
+
+export default class PanelBasic extends Component {
+  config = {
+    navigationBarTitleText: 'Taro UI'
+  }
+
+  constructor () {
+    super(...arguments)
+
+    this.state = {
+      panelNames: {
+        basic: {
+          name: '基础',
+          icon: iconBasic
+        },
+        view: {
+          name: '视图',
+          icon: iconView
+        },
+        action: {
+          name: '操作反馈',
+          icon: iconAction
+        },
+        form: {
+          name: '表单',
+          icon: iconForm
+        },
+        layout: {
+          name: '布局',
+          icon: iconLayout
+        },
+        navigation: {
+          name: '导航',
+          icon: iconNavigation
+        }
+      },
+      list: {
+        'basic': [
+          {
+            id: 'Color',
+            name: '颜色'
+          },
+          {
+            id: 'Icon',
+            name: '图标'
+          },
+          {
+            id: 'Typo',
+            name: '字体'
+          },
+          {
+            id: 'Button',
+            name: '按钮'
+          }
+        ],
+        'view': [
+          {
+            id: 'Avatar',
+            name: '头像'
+          },
+          {
+            id: 'Article',
+            name: '文章'
+          },
+          {
+            id: 'Badge',
+            name: '徽标'
+          },
+          {
+            id: 'NoticeBar',
+            name: '通告栏'
+          },
+          {
+            id: 'Tag',
+            name: '标签'
+          },
+          {
+            id: 'Timeline',
+            name: '时间轴'
+          }
+        ],
+        'action': [
+          {
+            id: 'Action-Sheet',
+            name: '动作面板'
+          },
+          {
+            id: 'Activity-Indicator',
+            name: '活动指示器'
+          },
+          {
+            id: 'Modal',
+            name: '模态框'
+          },
+          {
+            id: 'Progress',
+            name: '进度条'
+          },
+          {
+            id: 'Toast',
+            name: '轻提示'
+          }
+        ],
+        'form': [
+          {
+            id: 'Input',
+            name: '输入框'
+          },
+          {
+            id: 'Radio',
+            name: '单选框'
+          },
+          {
+            id: 'Checkbox',
+            name: '复选框'
+          },
+          {
+            id: 'Switch',
+            name: '开关'
+          },
+          {
+            id: 'Rate',
+            name: '评分'
+          },
+          {
+            id: 'Input-Number',
+            name: '数字输入框'
+          },
+          {
+            id: 'Textarea',
+            name: '多行文本框'
+          }
+        ],
+        'layout': [
+          {
+            id: 'Flex',
+            name: '弹性布局'
+          },
+          {
+            id: 'Grid',
+            name: '栅格'
+          },
+          {
+            id: 'List',
+            name: '列表'
+          },
+          {
+            id: 'Card',
+            name: '卡片'
+          },
+          {
+            id: 'Float-Layout',
+            name: '浮动弹层'
+          }
+        ],
+        'navigation': [
+          {
+            id: 'NavBar',
+            name: '导航栏'
+          },
+          {
+            id: 'TabBar',
+            name: '标签栏'
+          },
+          {
+            id: 'Tabs',
+            name: '标签页'
+          },
+          {
+            id: 'Segmented-Control',
+            name: '分段器'
+          },
+          {
+            id: 'Pagination',
+            name: '分页器'
+          },
+          {
+            id: 'Drawer',
+            name: '抽屉'
+          }
+        ]
+      }
+    }
+  }
+
+  componentDidMount () {
+    const { id } = this.$router.params
+    this.setState({
+      currentId: id.toLowerCase() || ''
+    })
+  }
+
+  gotoComponent = e => {
+    const { id, parent } = e.currentTarget.dataset
+    Taro.navigateTo({
+      url: `/pages/${parent.toLowerCase()}/${id.toLowerCase()}/index`
+    })
+  }
+
+  render () {
+    const { list, currentId, panelNames } = this.state
+    const itemList = list[currentId] || []
+    const title = (panelNames[currentId] && panelNames[currentId].name) || ''
+    const icon = (panelNames[currentId] && panelNames[currentId].icon) || ''
+
+    return (
+      <View className='page'>
+        {/* S Header */}
+        <View className='panel-header'>
+          <View className='panel-header__icon'>
+            {
+              icon ? <Image src={icon} className='img' mode='widthFix' />
+                : <Text className='at-icon at-icon-list'></Text>
+            }
+          </View>
+          <View className='panel-header__title'>{title}</View>
+        </View>
+        {/* E Header */}
+
+        {/* S Body */}
+        <View className='panel-body'>
+          <View className='component-list'>
+            {itemList.map(item => (
+              <View
+                className='component-list__item'
+                key={item.id}
+                data-id={item.id}
+                data-parent={currentId}
+                onClick={this.gotoComponent}
+              >
+                <Text className='name'>{`${item.id} ${item.name}`}</Text>
+                <AtIcon type='chevron-right' />
+              </View>
+            ))}
+          </View>
+        </View>
+        {/* E Body */}
+      </View>
+    )
+  }
+}

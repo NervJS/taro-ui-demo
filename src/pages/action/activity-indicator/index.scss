@@ -1,0 +1,23 @@
+
+.activity-indicator-page .panel__content {
+  .example-item {
+    display: flex;
+    align-items: center;
+
+    &--center {
+      height: 375px;
+      position: relative;
+      background-color: #fafbfc;
+      margin-bottom: 20px;
+    }
+
+    .subitem {
+      margin-left: 32px;
+      flex: 0 0 auto;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
