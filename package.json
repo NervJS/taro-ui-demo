@@ -23,24 +23,27 @@
 		"taro-ui": "^1.0.1"
 	},
 	"devDependencies": {
-		"@types/react": "16.3.14",
-		"@types/webpack-env": "^1.13.6",
 		"@tarojs/cli": "1.0.0-beta.18",
 		"@tarojs/plugin-babel": "1.0.0-beta.18",
 		"@tarojs/plugin-csso": "1.0.0-beta.18",
 		"@tarojs/plugin-sass": "1.0.0-beta.18",
 		"@tarojs/plugin-uglifyjs": "1.0.0-beta.18",
 		"@tarojs/webpack-runner": "1.0.0-beta.18",
+		"@types/react": "16.3.14",
+		"@types/webpack-env": "^1.13.6",
+		"babel-eslint": "^8.2.3",
 		"babel-plugin-transform-class-properties": "^6.24.1",
 		"babel-plugin-transform-decorators-legacy": "^1.3.4",
 		"babel-plugin-transform-jsx-stylesheet": "^0.6.5",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
-		"babel-eslint": "^8.2.3",
 		"eslint": "^4.19.1",
 		"eslint-config-taro": "1.0.0-beta.18",
-		"eslint-plugin-react": "^7.8.2",
 		"eslint-plugin-import": "^2.12.0",
-		"eslint-plugin-taro": "1.0.0-beta.18"
+		"eslint-plugin-react": "^7.8.2",
+		"eslint-plugin-taro": "1.0.0-beta.18",
+		"stylelint": "^9.5.0",
+		"stylelint-config-standard": "^18.2.0",
+		"stylelint-scss": "^3.3.0"
 	}
 }
