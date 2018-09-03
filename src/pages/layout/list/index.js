@@ -1,24 +1,24 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
-import { AtList, AtListItem } from 'taro-ui'
+import Taro, { Component } from "@tarojs/taro"
+import { View } from "@tarojs/components"
+import { AtList, AtListItem } from "taro-ui"
 
-import DocsHeader from '../../components/doc-header'
-import './index.scss'
+import DocsHeader from "../../components/doc-header"
+import "./index.scss"
 
 export default class ListPage extends Component {
   config = {
-    navigationBarTitleText: 'Taro UI'
+    navigationBarTitleText: "Taro UI"
   }
 
   handleChange = e => {
-    console.log('Change Switch', e)
+    console.log("Change Switch", e)
   }
 
   handleClick = e => {
-    console.log('Click Item', e)
+    console.log("Click Item", e)
   }
 
-  render () {
+  render() {
     return (
       <View className='page'>
         <DocsHeader title='List 列表' />
@@ -117,6 +117,13 @@ export default class ListPage extends Component {
                   <AtListItem
                     title='标题文字'
                     isSwitch
+                    onClick={this.handleClick}
+                    onSwitchChange={this.handleChange}
+                  />
+                  <AtListItem
+                    switchIsCheck
+                    isSwitch
+                    title='标题文字'
                     onSwitchChange={this.handleChange}
                   />
                 </AtList>
