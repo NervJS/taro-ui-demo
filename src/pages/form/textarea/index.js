@@ -10,6 +10,7 @@ export default class Index extends Taro.Component {
   config = {
     navigationBarTitleText: 'Taro UI'
   }
+
   constructor () {
     super(...arguments)
     this.state = {
@@ -19,6 +20,7 @@ export default class Index extends Taro.Component {
       value4: ''
     }
   }
+
   handleChange (stateName, e) {
     this.setState({
       [stateName]: e.target.value

@@ -171,7 +171,7 @@ export default class ModalPage extends Taro.Component {
           cancelText='取消'
           confirmText='确认'
           content='欢迎加入京东凹凸实验室\n\r欢迎加入京东凹凸实验室'
-          oncancel={this.closeModal.bind(this, 4, '点击了取消')}
+          onCancel={this.closeModal.bind(this, 4, '点击了取消')}
           onConfirm={this.closeModalConfirm.bind(this, 4, '点击了确认')}
         />
       </View>

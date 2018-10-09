@@ -47,7 +47,7 @@ export default class PanelBasic extends Component {
         }
       },
       list: {
-        'basic': [
+        basic: [
           {
             id: 'Color',
             name: '颜色'
@@ -65,7 +65,7 @@ export default class PanelBasic extends Component {
             name: '按钮'
           }
         ],
-        'view': [
+        view: [
           {
             id: 'Avatar',
             name: '头像'
@@ -89,9 +89,13 @@ export default class PanelBasic extends Component {
           {
             id: 'Timeline',
             name: '时间轴'
+          },
+          {
+            id: 'Swiper',
+            name: '滑块视图容器'
           }
         ],
-        'action': [
+        action: [
           {
             id: 'Action-Sheet',
             name: '动作面板'
@@ -111,9 +115,13 @@ export default class PanelBasic extends Component {
           {
             id: 'Toast',
             name: '轻提示'
+          },
+          {
+            id: 'Swipe-Action',
+            name: '滑动操作'
           }
         ],
-        'form': [
+        form: [
           {
             id: 'Input',
             name: '输入框'
@@ -141,9 +149,25 @@ export default class PanelBasic extends Component {
           {
             id: 'Textarea',
             name: '多行文本框'
+          },
+          {
+            id: 'Picker',
+            name: '选择器'
+          },
+          {
+            id: 'Picker-View',
+            name: '滚动选择器'
+          },
+          {
+            id: 'Slider',
+            name: '滑动条'
+          },
+          {
+            id: 'Search-Bar',
+            name: '搜索栏'
           }
         ],
-        'layout': [
+        layout: [
           {
             id: 'Flex',
             name: '弹性布局'
@@ -163,9 +187,13 @@ export default class PanelBasic extends Component {
           {
             id: 'Float-Layout',
             name: '浮动弹层'
+          },
+          {
+            id: 'Accordion',
+            name: '手风琴'
           }
         ],
-        'navigation': [
+        navigation: [
           {
             id: 'NavBar',
             name: '导航栏'

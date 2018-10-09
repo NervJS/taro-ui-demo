@@ -7,18 +7,18 @@ import "./index.scss"
 
 export default class ListPage extends Component {
   config = {
-    navigationBarTitleText: "Taro UI"
+    navigationBarTitleText: 'Taro UI'
   }
 
   handleChange = e => {
-    console.log("Change Switch", e)
+    console.log('Change Switch', e)
   }
 
   handleClick = e => {
-    console.log("Click Item", e)
+    console.log('Click Item', e)
   }
 
-  render() {
+  render () {
     return (
       <View className='page'>
         <DocsHeader title='List 列表' />
@@ -33,6 +33,7 @@ export default class ListPage extends Component {
                   <AtListItem title='标题文字' onClick={this.handleClick} />
                   <AtListItem title='标题文字' arrow='right' />
                   <AtListItem title='标题文字' extraText='详细信息' />
+                  <AtListItem title='禁用状态' disabled extraText='详细信息' />
                 </AtList>
               </View>
             </View>
@@ -121,8 +122,8 @@ export default class ListPage extends Component {
                     onSwitchChange={this.handleChange}
                   />
                   <AtListItem
-                    switchIsCheck
                     isSwitch
+                    switchIsCheck
                     title='标题文字'
                     onSwitchChange={this.handleChange}
                   />

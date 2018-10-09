@@ -41,7 +41,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -58,7 +58,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -75,7 +75,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -92,7 +92,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -109,7 +109,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -126,7 +126,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
@@ -143,7 +143,7 @@ export default class IconPage extends Taro.Component {
                     <View className='icon-list__icon'>
                       <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
                     </View>
-                    <View className='icon-list__name'>at-icon-{icon}</View>
+                    <View className='icon-list__name'>{icon}</View>
                   </View>
                 ))}
               </View>
