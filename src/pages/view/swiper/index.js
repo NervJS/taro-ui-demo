@@ -1,7 +1,6 @@
 import Taro from '@tarojs/taro'
 import { View, Text, Swiper, SwiperItem, Slider, Image } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
-
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
 
@@ -74,7 +73,6 @@ export default class PageSlider extends Taro.Component {
             <View className='panel__content'>
               <View className='example-item'>
                 <Swiper
-                  slideMult='10'
                   indicatorColor='#999'
                   indicatorActiveColor='#333'
                   current={current}

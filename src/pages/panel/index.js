@@ -8,6 +8,7 @@ import iconAction from '../../assets/images/icon-list-action.png'
 import iconForm from '../../assets/images/icon-list-form.png'
 import iconLayout from '../../assets/images/icon-list-layout.png'
 import iconNavigation from '../../assets/images/icon-list-navigation.png'
+import iconHOC from '../../assets/images/icon-list-hoc.png'
 
 import './index.scss'
 
@@ -44,6 +45,10 @@ export default class PanelBasic extends Component {
         navigation: {
           name: '导航',
           icon: iconNavigation
+        },
+        advanced: {
+          name: '高阶组件',
+          icon: iconHOC
         }
       },
       list: {
@@ -79,6 +84,18 @@ export default class PanelBasic extends Component {
             name: '徽标'
           },
           {
+            id: 'CountDown',
+            name: '倒计时'
+          },
+          {
+            id: 'Curtain',
+            name: '幕帘'
+          },
+          {
+            id: 'Divider',
+            name: '分割线'
+          },
+          {
             id: 'NoticeBar',
             name: '通告栏'
           },
@@ -93,6 +110,14 @@ export default class PanelBasic extends Component {
           {
             id: 'Swiper',
             name: '滑块视图容器'
+          },
+          {
+            id: 'Load-More',
+            name: '页面提示'
+          },
+          {
+            id: 'Steps',
+            name: '步骤条'
           }
         ],
         action: [
@@ -119,6 +144,10 @@ export default class PanelBasic extends Component {
           {
             id: 'Swipe-Action',
             name: '滑动操作'
+          },
+          {
+            id: 'Message',
+            name: '消息通知'
           }
         ],
         form: [
@@ -165,6 +194,14 @@ export default class PanelBasic extends Component {
           {
             id: 'Search-Bar',
             name: '搜索栏'
+          },
+          {
+            id: 'Image-Picker',
+            name: '图片选择器'
+          },
+          {
+            id: 'Range',
+            name: '范围选择器'
           }
         ],
         layout: [
@@ -217,6 +254,16 @@ export default class PanelBasic extends Component {
           {
             id: 'Drawer',
             name: '抽屉'
+          },
+          {
+            id: 'Indexes',
+            name: '索引选择器'
+          }
+        ],
+        advanced: [
+          {
+            id: 'Calendar',
+            name: '日历'
           }
         ]
       }
