@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtMessage, AtButton, message } from 'taro-ui'
+import { AtMessage, AtButton } from 'taro-ui'
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
 
@@ -10,14 +10,13 @@ export default class ToastPage extends Component {
   }
 
   handleClick (type) {
-    message({
+    Taro.atMessage({
       'message': '消息通知',
       'type': type,
     })
   }
 
   render () {
-    console.log(typeof message)
     return (
       <View className='page toast-page'>
         {/* S Header */}
