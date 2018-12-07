@@ -1,4 +1,5 @@
-@import './assets/font/iconfont.css';
+@import "./assets/font-awesome/font-awesome.scss";
+@import "./assets/font/iconfont.scss";
 
 #app {
   background-color: #f8f8f8;
@@ -28,7 +29,7 @@ view {
   &__header {
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
 
     &-title {
       color: #999;
@@ -38,7 +39,7 @@ view {
     &-note {
       font-size: 24px;
       margin-left: 20px;
-      color: #CCC;
+      color: #ccc;
     }
   }
 }
@@ -94,11 +95,11 @@ view {
         left: 24px;
         top: 50%;
         margin-top: -20px;
-        width: 2PX;
+        width: 2px;
         height: 40px;
         background-color: #6190e8;
         box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
-        border-radius: 1PX;
+        border-radius: 1px;
       }
     }
 

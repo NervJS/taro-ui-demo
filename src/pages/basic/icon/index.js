@@ -1,32 +1,32 @@
-import Taro from '@tarojs/taro'
-import { View } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import Taro from "@tarojs/taro"
+import { View } from "@tarojs/components"
+import { AtIcon } from "taro-ui"
 
-import ICONS from './icons'
-import DocsHeader from '../../components/doc-header'
-import './index.scss'
+import ICONS from "./icons"
+import DocsHeader from "../../components/doc-header"
+import "./index.scss"
 
 export default class IconPage extends Taro.Component {
   config = {
-    navigationBarTitleText: 'Taro UI'
+    navigationBarTitleText: "Taro UI"
   }
 
-  constructor () {
+  constructor() {
     super(...arguments)
     this.state = {
       icons: ICONS
     }
   }
 
-  render () {
+  render() {
     const { icons } = this.state
-    const iconColor = '#999'
+    const iconColor = "#999"
     const iconSize = 30
 
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='ICON 图标'></DocsHeader>
+        <DocsHeader title='ICON 图标' />
         {/* E Header */}
 
         {/* S Body */}
@@ -39,7 +39,7 @@ export default class IconPage extends Taro.Component {
                 {icons.main.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -56,7 +56,7 @@ export default class IconPage extends Taro.Component {
                 {icons.file.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -73,7 +73,7 @@ export default class IconPage extends Taro.Component {
                 {icons.text.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -90,7 +90,7 @@ export default class IconPage extends Taro.Component {
                 {icons.arrow.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -107,7 +107,7 @@ export default class IconPage extends Taro.Component {
                 {icons.media.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -124,7 +124,7 @@ export default class IconPage extends Taro.Component {
                 {icons.photo.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
@@ -141,11 +141,95 @@ export default class IconPage extends Taro.Component {
                 {icons.logo.map((icon, index) => (
                   <View className='icon-list__item' key={index}>
                     <View className='icon-list__icon'>
-                      <AtIcon value={icon} color={iconColor} size={iconSize}></AtIcon>
+                      <AtIcon value={icon} color={iconColor} size={iconSize} />
                     </View>
                     <View className='icon-list__name'>at-icon-{icon}</View>
                   </View>
                 ))}
+              </View>
+            </View>
+          </View>
+
+          {/* 第三方 FontAweasome */}
+          <View className='panel'>
+            <View className='panel__title'>第三方 FontAweasome</View>
+            <View className='panel__content'>
+              <View className='icon-list'>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='fa'
+                      value='glass'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-glass</View>
+                </View>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='fa'
+                      value='download'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-download</View>
+                </View>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='fa'
+                      value='refresh'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-refresh</View>
+                </View>
+              </View>
+            </View>
+          </View>
+
+          {/* 第三方 IconFont */}
+          <View className='panel'>
+            <View className='panel__title'>第三方 IconFont</View>
+            <View className='panel__content'>
+              <View className='icon-list'>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='iconfont'
+                      value='bianji'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-glass</View>
+                </View>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='iconfont'
+                      value='fenxiangfangshi'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-download</View>
+                </View>
+                <View className='icon-list__item'>
+                  <View className='icon-list__icon'>
+                    <AtIcon
+                      prefixClass='iconfont'
+                      value='guanlianshebei'
+                      color={iconColor}
+                      size={iconSize}
+                    />
+                  </View>
+                  <View className='icon-list__name'>fa-refresh</View>
+                </View>
               </View>
             </View>
           </View>
