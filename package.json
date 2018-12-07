@@ -20,7 +20,7 @@
 		"@tarojs/taro-h5": "1.2.0-beta.10",
 		"@tarojs/taro-weapp": "1.2.0-beta.10",
 		"nervjs": "^1.3.0",
-		"taro-ui": "1.5.1"
+		"taro-ui": "1.5.0"
 	},
 	"devDependencies": {
 		"@tarojs/cli": "1.2.0-beta.10",
