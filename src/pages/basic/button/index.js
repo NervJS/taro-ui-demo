@@ -1,7 +1,9 @@
 import Taro from '@tarojs/taro'
 import { View, Form } from '@tarojs/components'
+
 import { AtButton, AtForm } from 'taro-ui'
 import DocsHeader from '../../components/doc-header'
+
 import './index.scss'
 
 export default class ButtonPage extends Taro.Component {
@@ -229,7 +231,7 @@ export default class ButtonPage extends Taro.Component {
           {/* 支付宝小程序 button 属性（仅部分支持） */}
           {isALIPAY && <View className='panel'>
             <View className='panel__title'>支付宝小程序 button 属性</View>
-            <View className='panel__content'>
+            <View className='panel__content demo-button'>
               <View className='btn-item'>
                 <AtButton openType='share' type='primary'>分享</AtButton>
               </View>
