@@ -1,6 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
 
 import iconBasic from '../../assets/images/icon-list-basic.png'
 import iconView from '../../assets/images/icon-list-view.png'
@@ -316,7 +315,7 @@ export default class PanelBasic extends Component {
                 onClick={this.gotoComponent}
               >
                 <Text className='name'>{`${item.id} ${item.name}`}</Text>
-                <AtIcon value='chevron-right' />
+                <Text className='at-icon at-icon-chevron-right' />
               </View>
             ))}
           </View>
