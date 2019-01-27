@@ -1,17 +1,13 @@
+@import "./assets/css/theme.scss";
 @import "~taro-ui/dist/style/index.scss";
 @import "./assets/font-awesome/font-awesome.scss";
 @import "./assets/font/iconfont.scss";
-
-#app {
-  background-color: #f8f8f8;
-}
 
 .page {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   min-height: 100vh;
-  background-color: #f8f8f8;
 }
 
 view {
@@ -58,7 +54,12 @@ view {
 
     .subitem {
       display: inline-block;
-      margin-left: 24px;
+      margin-left: 32px;
+      vertical-align: middle;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
 
     &__desc {
@@ -66,49 +67,74 @@ view {
       color: #333;
       font-size: 24px;
     }
+
+    .demo-btn {
+      position: relative;
+      display: inline-block;
+      padding: 12px 24px;
+      color: #fff;
+      font-size: 28px;
+      text-align: center;
+      border-radius: 8px;
+      background: $color-brand-light;
+      overflow: hidden;
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
   }
 }
 
 .doc-body {
-  min-height: calc(100vh - 180px);
-  background: #fff;
-  box-shadow: 0 26px 163px 0 rgba(0, 0, 0, 0.11);
+  // min-height: calc(100vh - 180px);
+  // background: #fff;
+  // box-shadow: 0 26px 163px 0 rgba(0, 0, 0, 0.11);
   padding-bottom: 60px;
   padding-bottom: calc(constant(safe-area-inset-bottom) + 60px);
   padding-bottom: calc(env(safe-area-inset-bottom) + 60px);
 
   .panel {
-    margin: 32px 0 56px;
+    margin: 80px 0 56px;
+
+    &:first-child {
+      margin-top: 40px;
+    }
 
     &__title {
       position: relative;
-      margin-bottom: 50px;
-      padding-left: 50px;
-      color: #6a6a77;
+      margin-bottom: 40px;
+      padding-left: 60px;
+      color: #7F7F7F;
       font-size: 32px;
       font-weight: bold;
       line-height: 1.5;
 
-      &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        left: 24px;
-        top: 50%;
-        margin-top: -20px;
-        width: 2px;
-        height: 40px;
-        background-color: #6190e8;
-        box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
-        border-radius: 1px;
-      }
+      // &::before {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 0;
+      //   width: 30px;
+      //   height: 4px;
+      //   border-top-right-radius: 2px;
+      //   border-bottom-right-radius: 2px;
+      //   background: $color-brand-light;
+      //   box-shadow: 1px 1px 2px 0 rgba($color: $color-brand-light, $alpha: 0.5);
+      //   transform: translate3d(0, -50%, 0);
+      // }
     }
 
     &__content {
-      padding: 0 20px;
+      padding: 0 60px;
 
       &.no-padding {
         padding: 0;
+
+        .example-item__desc {
+          padding: 0 60px;
+        }
       }
     }
   }

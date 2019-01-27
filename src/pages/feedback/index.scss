@@ -1,0 +1,29 @@
+.indicator-panel {
+  display: flex;
+  align-items: center;
+  height: 375px;
+  position: relative;
+  background-color: #fafbfc;
+  margin-bottom: 20px;
+
+  .subitem {
+    margin-left: 32px;
+    flex: 0 0 auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.example-item--border {
+  /* prettier-ignore */
+  border: 1PX solid #e2ecf4;
+  border-left: none;
+  border-right: none;
+
+  .normal {
+    // padding: 0 24px;
+    line-height: 88px;
+  }
+}

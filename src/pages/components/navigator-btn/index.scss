@@ -1,0 +1,29 @@
+@import "../../../assets/css/theme.scss";
+
+.demo-goto-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 70px 12px 24px;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 8px;
+  background: $color-brand-light;
+  overflow: hidden;
+
+  &::after {
+    content: '→';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 100%;
+    background: $color-brand;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

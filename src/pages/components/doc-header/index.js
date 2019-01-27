@@ -6,20 +6,23 @@ import './index.scss'
 
 export default class DocsHeader extends Component {
   render () {
-    const { title } = this.props
+    const { title, desc } = this.props
 
     return (
       <View className='doc-header'>
         <View className='doc-header__title'>{title}</View>
+        <View className='doc-header__desc'>{desc}</View>
       </View>
     )
   }
 }
 
 DocsHeader.defaultProps = {
-  title: '标题'
+  title: '标题',
+  desc: '',
 }
 
 DocsHeader.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  desc: PropTypes.string,
 }
