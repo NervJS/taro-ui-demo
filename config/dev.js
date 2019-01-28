@@ -1,4 +1,9 @@
+/* eslint-disable import/no-commonjs */
 module.exports = {
+  env: {
+    NODE_ENV: '"development"'
+  },
+  defineConstants: {},
   weapp: {
     module: {
       postcss: {
@@ -10,10 +15,11 @@ module.exports = {
       }
     }
   },
-  env: {
-    NODE_ENV: '"development"'
-  },
-  defineConstants: {},
-  weapp: {},
-  h5: {}
+  h5: {
+    devServer: {
+      host: '0.0.0.0',
+      disableHostCheck: true,
+      port: 8080
+    }
+  }
 }

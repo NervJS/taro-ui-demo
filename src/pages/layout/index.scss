@@ -18,3 +18,9 @@
     }
   }
 }
+
+.panel__content {
+  .example-item + .example-item.example-item--card {
+    margin-top: 48px;
+  }
+}

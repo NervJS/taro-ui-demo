@@ -128,26 +128,14 @@ export default class ViewPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='View' desc='8 components'></DocsHeader>
+        <DocsHeader title='视图' desc='8 个组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
-          <AtCurtain
-            isOpened={isCurtainOpened}
-            closeBtnPosition='bottom'
-            onClose={this.handleCurtainClick.bind(this, false)}
-          >
-            <Image
-              style='width:100%'
-              mode='widthFix'
-              src={curtainPng}
-            />
-          </AtCurtain>
-
           {/* Article */}
           <View className='panel'>
-            <View className='panel__title'>Article</View>
+            <View className='panel__title'>Article 文章</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <NavigatorBtn parent='view' name='article'></NavigatorBtn>
@@ -157,7 +145,7 @@ export default class ViewPage extends Taro.Component {
 
           {/* Avatar */}
           <View className='panel'>
-            <View className='panel__title'>Avatar</View>
+            <View className='panel__title'>Avatar 头像</View>
             <View className='panel__content'>
               {/* 圆形头像 */}
               <View className='example-item'>
@@ -200,26 +188,26 @@ export default class ViewPage extends Taro.Component {
 
           {/* Badge */}
           <View className='panel'>
-            <View className='panel__title'>Badge</View>
+            <View className='panel__title'>Badge 徽标</View>
             <View className='panel__content'>
               {/* 数字 + 小红点 */}
               <View className='example-item'>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value='10' maxValue={99}>
                     <AtButton size='small' circle>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value='100' maxValue={99}>
                     <AtButton size='small'>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge dot>
                     <AtButton size='small' circle>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge dot>
                     <AtButton size='small'>按钮</AtButton>
                   </AtBadge>
@@ -228,22 +216,22 @@ export default class ViewPage extends Taro.Component {
 
               {/* 文本 + 省略号 */}
               <View className='example-item'>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value='NEW'>
                     <AtButton size='small' circle>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value='NEW'>
                     <AtButton size='small'>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value={dot}>
                     <AtButton size='small' circle>按钮</AtButton>
                   </AtBadge>
                 </View>
-                <View className='subitem'>
+                <View className='subitem subitem--badge'>
                   <AtBadge value={dot}>
                     <AtButton size='small'>按钮</AtButton>
                   </AtBadge>
@@ -254,7 +242,7 @@ export default class ViewPage extends Taro.Component {
 
           {/* Tag */}
           <View className='panel'>
-            <View className='panel__title'>Tag</View>
+            <View className='panel__title'>Tag 标签</View>
             <View className='panel__content'>
               {/* 空心标签 */}
               <View className='example-item'>
@@ -340,7 +328,7 @@ export default class ViewPage extends Taro.Component {
 
           {/* Countdown */}
           <View className='panel'>
-            <View className='panel__title'>Countdown</View>
+            <View className='panel__title'>Countdown 倒计时</View>
             <View className='panel__content'>
               {/* 一般用法 */}
               <View className='example-item'>
@@ -375,43 +363,21 @@ export default class ViewPage extends Taro.Component {
 
           {/* Curtain */}
           <View className='panel'>
-            <View className='panel__title'>Curtain</View>
+            <View className='panel__title'>Curtain 幕帘</View>
             <View className='panel__content'>
               {/* 一般用法 */}
               <View className='example-item'>
                 <View
                   className='demo-btn'
                   onClick={this.handleCurtainClick.bind(this, true)}
-                >Show Curtain</View>
-              </View>
-            </View>
-          </View>
-
-          {/* Divider */}
-          <View className='panel'>
-            <View className='panel__title'>Divider</View>
-            <View className='panel__content'>
-              {/* 一般用法 */}
-              <View className='example-item'>
-                <AtDivider content='thank you' />
-              </View>
-            </View>
-          </View>
-
-          {/* LoadMore */}
-          <View className='panel'>
-            <View className='panel__title'>Load More</View>
-            <View className='panel__content'>
-              {/* 一般用法 */}
-              <View className='example-item'>
-                <AtLoadMore onClick={this.handleLoadMoreClick.bind(this)} status={loadMoreStatus} />
+                >显示幕帘</View>
               </View>
             </View>
           </View>
 
           {/* Noticebar */}
           <View className='panel'>
-            <View className='panel__title'>Noticebar</View>
+            <View className='panel__title'>Noticebar 通告栏</View>
             <View className='panel__content'>
               {/* 一般用法 */}
               <View className='example-item'>
@@ -449,10 +415,10 @@ export default class ViewPage extends Taro.Component {
 
           {/* Steps */}
           <View className='panel'>
-            <View className='panel__title'>Steps</View>
+            <View className='panel__title'>Steps 步骤条</View>
             <View className='panel__content'>
               {/* 一般用法 */}
-              <View className='example-item'>
+              <View className='example-item example-item--steps'>
                 <AtSteps
                   items={[
                     { 'title': '步骤一' },
@@ -464,7 +430,7 @@ export default class ViewPage extends Taro.Component {
               </View>
 
               {/* 带附加信息 */}
-              <View className='example-item'>
+              <View className='example-item example-item--steps'>
                 <AtSteps
                   items={[
                     { 'title': '步骤一', 'desc': '这里是额外的信息，最多两行' },
@@ -477,7 +443,7 @@ export default class ViewPage extends Taro.Component {
               </View>
 
               {/* 自定义图标 */}
-              <View className='example-item'>
+              <View className='example-item example-item--steps'>
                 <AtSteps
                   items={[
                     {
@@ -517,7 +483,7 @@ export default class ViewPage extends Taro.Component {
               </View>
 
               {/* 状态步骤条 */}
-              <View className='example-item'>
+              <View className='example-item example-item--steps'>
                 <AtSteps
                   items={[
                     {
@@ -545,7 +511,7 @@ export default class ViewPage extends Taro.Component {
 
           {/* Swiper */}
           <View className='panel'>
-            <View className='panel__title'>Swiper</View>
+            <View className='panel__title'>Swiper 滑块视图容器</View>
             <View className='panel__content'>
               {/* 一般用法 */}
               <View className='example-item'>
@@ -574,10 +540,11 @@ export default class ViewPage extends Taro.Component {
 
           {/* Timeline */}
           <View className='panel'>
-            <View className='panel__title'>Timeline</View>
+            <View className='panel__title'>Timeline 时间轴</View>
             <View className='panel__content'>
               {/* 一般用法 */}
               <View className='example-item'>
+                <View className='example-item__desc'>一般用法</View>
                 <AtTimeline
                   items={[
                     { title: '刷牙洗脸' },
@@ -588,20 +555,9 @@ export default class ViewPage extends Taro.Component {
                 ></AtTimeline>
               </View>
 
-              {/* 自定义颜色 */}
-              <View className='example-item'>
-                <AtTimeline
-                  items={[
-                    { title: '刷牙洗脸' },
-                    { title: '吃早餐', color: 'green' },
-                    { title: '上班', color: 'red' },
-                    { title: '睡觉', color: 'yellow' }
-                  ]}
-                ></AtTimeline>
-              </View>
-
               {/* 自定义图标 */}
               <View className='example-item'>
+                <View className='example-item__desc'>自定义图标</View>
                 <AtTimeline
                   items={[
                     { title: '刷牙洗脸', icon: 'check-circle' },
@@ -614,6 +570,7 @@ export default class ViewPage extends Taro.Component {
 
               {/* 幽灵节点 */}
               <View className='example-item'>
+                <View className='example-item__desc'>幽灵节点</View>
                 <AtTimeline
                   pending
                   items={[
@@ -627,6 +584,7 @@ export default class ViewPage extends Taro.Component {
 
               {/* 丰富内容 */}
               <View className='example-item'>
+                <View className='example-item__desc'>丰富内容</View>
                 <AtTimeline
                   pending
                   items={[
@@ -638,10 +596,45 @@ export default class ViewPage extends Taro.Component {
                 ></AtTimeline>
               </View>
             </View>
+
+            {/* Divider */}
+            <View className='panel'>
+              <View className='panel__title'>Divider 分隔线</View>
+              <View className='panel__content'>
+                {/* 一般用法 */}
+                <View className='example-item'>
+                  <AtDivider content='没有更多了' />
+                </View>
+              </View>
+            </View>
+
+            {/* LoadMore */}
+            <View className='panel'>
+              <View className='panel__title'>Load More 页面提示</View>
+              <View className='panel__content no-padding'>
+                {/* 一般用法 */}
+                <View className='example-item'>
+                  <AtLoadMore onClick={this.handleLoadMoreClick.bind(this)} status={loadMoreStatus} />
+                </View>
+              </View>
+            </View>
+
           </View>
 
         </View>
         {/* E Body */}
+
+        <AtCurtain
+          isOpened={isCurtainOpened}
+          closeBtnPosition='bottom'
+          onClose={this.handleCurtainClick.bind(this, false)}
+        >
+          <Image
+            style='width:100%'
+            mode='widthFix'
+            src={curtainPng}
+          />
+        </AtCurtain>
       </View>
     )
   }

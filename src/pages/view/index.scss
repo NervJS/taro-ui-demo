@@ -1,0 +1,9 @@
+.panel__content {
+  .subitem + .subitem.subitem--badge {
+    margin-left: 56px;
+  }
+
+  .example-item + .example-item.example-item--steps {
+    margin-top: 56px;
+  }
+}

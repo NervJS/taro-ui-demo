@@ -15,37 +15,37 @@ export default class Index extends Taro.Component {
       list: [
         {
           id: 'Basic',
-          title: 'Basic',
-          content: '1 component',
+          title: '基础',
+          content: '按钮组件',
         },
         {
           id: 'View',
-          title: 'View',
-          content: '8 components',
+          title: '视图',
+          content: '通告栏等8个组件',
         },
         {
           id: 'Feedback',
-          title: 'Feedback',
-          content: '7 components',
+          title: '操作反馈',
+          content: '对话框等7个组件',
         },
         {
           id: 'Data-entry',
-          title: 'Data Entry',
-          content: '13 components',
+          title: '数据录入',
+          content: '输入框等13个组件',
         },
         {
           id: 'Layout',
-          title: 'Layout',
-          content: '6 components',
+          title: '布局',
+          content: '列表等6个组件',
         },
         {
           id: 'Navigation',
-          title: 'Navigation',
-          content: '7 components',
+          title: '导航',
+          content: '标签栏等7个组件',
         }, {
           id: 'Advanced',
-          title: 'Advanced',
-          content: '1 components',
+          title: '高阶',
+          content: '日历组件',
         }
       ]
     }

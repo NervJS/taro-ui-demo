@@ -65,14 +65,14 @@ export default class LayoutPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='Layout' desc='6 component'></DocsHeader>
+        <DocsHeader title='布局' desc='6 个组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
           {/* Flex */}
           <View className='panel'>
-            <View className='panel__title'>Flex</View>
+            <View className='panel__title'>Flex 弹性布局</View>
             <View className='panel__content'>
               <View className='example-item flex-page'>
                 <View className='example-item__desc'>基本案例</View>
@@ -97,7 +97,7 @@ export default class LayoutPage extends Taro.Component {
 
           {/* Grid */}
           <View className='panel'>
-            <View className='panel__title'>Grid</View>
+            <View className='panel__title'>Grid 栅格</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='example-item__desc'>正方形案例</View>
@@ -112,65 +112,6 @@ export default class LayoutPage extends Taro.Component {
               <View className='example-item'>
                 <View className='example-item__desc'>没有边框</View>
                 <AtGrid hasBorder={false} data={this.state.data} />
-              </View>
-            </View>
-          </View>
-
-          {/* Card */}
-          <View className='panel'>
-            <View className='panel__title'>Card</View>
-            <View className='panel__content no-padding'>
-              <View className='example-item'>
-                <View className='example-item__desc'>基础卡片</View>
-                <AtCard title='这是个标题'>
-                  这也是内容区 可以随意定义功能
-                </AtCard>
-              </View>
-
-              <View className='example-item'>
-                <View className='example-item__desc'>带图标的卡片</View>
-                <AtCard
-                  title='这是个标题'
-                  icon={{ value: 'tags', color: '#77a1fd' }}
-                >
-                  这也是内容区 可以随意定义功能
-                </AtCard>
-              </View>
-
-              <View className='example-item'>
-                <View className='example-item__desc'>完整的卡片</View>
-                <AtCard
-                  note='小Tips'
-                  extra='额外信息'
-                  title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
-                >
-                  这也是内容区 可以随意定义功能
-                </AtCard>
-              </View>
-
-              <View className='example-item'>
-                <View className='example-item__desc'>通栏卡片</View>
-                <AtCard
-                  isFull
-                  note='小Tips'
-                  extra='额外信息'
-                  title='这是个标题'
-                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
-                >
-                  这也是内容区 可以随意定义功能 这也是内容区 可以随意定义功能
-                  这也是内容区 可以随意定义功能
-                </AtCard>
-              </View>
-            </View>
-          </View>
-
-          {/* FloatLayout */}
-          <View className='panel'>
-            <View className='panel__title'>FloatLayout</View>
-            <View className='panel__content'>
-              <View className='example-item'>
-                <View className='demo-btn' onClick={this.handleFloatLayoutChange.bind(this, true)}>打开 Float Layout</View>
               </View>
             </View>
           </View>
@@ -197,7 +138,7 @@ export default class LayoutPage extends Taro.Component {
 
           {/* Accordion */}
           <View className='panel'>
-            <View className='panel__title'>Accordion</View>
+            <View className='panel__title'>Accordion 手风琴</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <AtAccordion title='展开列表'>
@@ -213,6 +154,65 @@ export default class LayoutPage extends Taro.Component {
                     />
                   </AtList>
                 </AtAccordion>
+              </View>
+            </View>
+          </View>
+
+          {/* FloatLayout */}
+          <View className='panel'>
+            <View className='panel__title'>FloatLayout 浮动弹层</View>
+            <View className='panel__content'>
+              <View className='example-item'>
+                <View className='demo-btn' onClick={this.handleFloatLayoutChange.bind(this, true)}>打开 Float Layout</View>
+              </View>
+            </View>
+          </View>
+
+          {/* Card */}
+          <View className='panel'>
+            <View className='panel__title'>Card 卡片</View>
+            <View className='panel__content no-padding'>
+              <View className='example-item example-item--card'>
+                <View className='example-item__desc'>基础卡片</View>
+                <AtCard title='这是个标题'>
+                  这也是内容区 可以随意定义功能
+                </AtCard>
+              </View>
+
+              <View className='example-item example-item--card'>
+                <View className='example-item__desc'>带图标的卡片</View>
+                <AtCard
+                  title='这是个标题'
+                  icon={{ value: 'tags', color: '#77a1fd' }}
+                >
+                  这也是内容区 可以随意定义功能
+                </AtCard>
+              </View>
+
+              <View className='example-item example-item--card'>
+                <View className='example-item__desc'>完整的卡片</View>
+                <AtCard
+                  note='小Tips'
+                  extra='额外信息'
+                  title='这是个标题'
+                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                >
+                  这也是内容区 可以随意定义功能
+                </AtCard>
+              </View>
+
+              <View className='example-item example-item--card'>
+                <View className='example-item__desc'>通栏卡片</View>
+                <AtCard
+                  isFull
+                  note='小Tips'
+                  extra='额外信息'
+                  title='这是个标题'
+                  thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                >
+                  这也是内容区 可以随意定义功能 这也是内容区 可以随意定义功能
+                  这也是内容区 可以随意定义功能
+                </AtCard>
               </View>
             </View>
           </View>

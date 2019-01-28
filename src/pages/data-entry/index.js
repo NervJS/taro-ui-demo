@@ -188,14 +188,14 @@ export default class DataEntryPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='Data Entry' desc='13 component'></DocsHeader>
+        <DocsHeader title='数据录入' desc='12 个组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
           {/* Radio */}
           <View className='panel'>
-            <View className='panel__title'>Radio</View>
+            <View className='panel__title'>Radio 单选框</View>
             <View className='panel__content no-padding'>
               <View className='radio-container'>
                 <AtRadio options={this.state.radioOptions} value={this.state.radioValue} onClick={this.handleRadioChange.bind(this)} />
@@ -205,7 +205,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* Checkbox */}
           <View className='panel'>
-            <View className='panel__title'>Checkbox</View>
+            <View className='panel__title'>Checkbox 复选框</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <View className='checkbox-container'>
@@ -221,7 +221,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* Switch */}
           <View className='panel'>
-            <View className='panel__title'>Switch</View>
+            <View className='panel__title'>Switch 开关</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <AtForm>
@@ -232,22 +232,9 @@ export default class DataEntryPage extends Taro.Component {
             </View>
           </View>
 
-          {/* ImagePicker */}
-          <View className='panel'>
-            <View className='panel__title'>ImagePicker</View>
-            <View className='panel__content no-padding'>
-              <View className='example-item'>
-                <AtImagePicker
-                  files={this.state.files}
-                  onChange={this.handleImageChange.bind(this, 'files')}
-                />
-              </View>
-            </View>
-          </View>
-
           {/* Input */}
           <View className='panel'>
-            <View className='panel__title'>Input</View>
+            <View className='panel__title'>Input 输入框</View>
             <View className='panel__content no-padding'>
               <View className='component-item'>
                 <AtForm>
@@ -261,7 +248,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* Textarea */}
           <View className='panel'>
-            <View className='panel__title'>Textarea</View>
+            <View className='panel__title'>Textarea 多行文本框</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <AtTextarea
@@ -274,9 +261,23 @@ export default class DataEntryPage extends Taro.Component {
             </View>
           </View>
 
+          {/* SearchBar */}
+          <View className='panel'>
+            <View className='panel__title'>SearchBar 搜索栏</View>
+            <View className='panel__content no-padding'>
+              <View className='component-item'>
+                <AtSearchBar
+                  value={this.state.searchbarValue}
+                  onChange={this.handleSearchBarChange.bind(this, 'searchbarValue')}
+                  onActionClick={this.onActionClick.bind(this)}
+                />
+              </View>
+            </View>
+          </View>
+
           {/* InputNumber */}
           <View className='panel'>
-            <View className='panel__title'>InputNumber</View>
+            <View className='panel__title'>InputNumber 数字输入框</View>
             <View className='panel__content'>
               {/* 基本用法 */}
               <View className='example-item'>
@@ -318,23 +319,9 @@ export default class DataEntryPage extends Taro.Component {
             </View>
           </View>
 
-          {/* SearchBar */}
-          <View className='panel'>
-            <View className='panel__title'>SearchBar</View>
-            <View className='panel__content no-padding'>
-              <View className='component-item'>
-                <AtSearchBar
-                  value={this.state.searchbarValue}
-                  onChange={this.handleSearchBarChange.bind(this, 'searchbarValue')}
-                  onActionClick={this.onActionClick.bind(this)}
-                />
-              </View>
-            </View>
-          </View>
-
           {/* Range */}
           <View className='panel'>
-            <View className='panel__title'>Range</View>
+            <View className='panel__title'>Range 范围选择器</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='example-item__desc'>
@@ -350,7 +337,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* Slider */}
           <View className='panel'>
-            <View className='panel__title'>Slider</View>
+            <View className='panel__title'>Slider 滑动条</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='example-item__desc'>step=1</View>
@@ -361,7 +348,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* Rate */}
           <View className='panel'>
-            <View className='panel__title'>Rate</View>
+            <View className='panel__title'>Rate 评分</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <AtRate value={this.state.rateValue} onChange={this.handleRateChange.bind(this, 'rateValue')} />
@@ -369,9 +356,22 @@ export default class DataEntryPage extends Taro.Component {
             </View>
           </View>
 
+          {/* ImagePicker */}
+          <View className='panel'>
+            <View className='panel__title'>ImagePicker 图片选择器</View>
+            <View className='panel__content no-padding'>
+              <View className='example-item'>
+                <AtImagePicker
+                  files={this.state.files}
+                  onChange={this.handleImageChange.bind(this, 'files')}
+                />
+              </View>
+            </View>
+          </View>
+
           {/* Picker */}
           <View className='panel'>
-            <View className='panel__title'>Picker</View>
+            <View className='panel__title'>Picker 选择器</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <Picker mode='selector' range={this.state.selector} value={this.state.selectorValue} onChange={this.handlePickerChange.bind(this)}>
@@ -386,7 +386,7 @@ export default class DataEntryPage extends Taro.Component {
 
           {/* PickerView */}
           <View className='panel'>
-            <View className='panel__title'>PickerView</View>
+            <View className='panel__title'>PickerView 滚动选择器</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='example-item__desc'>嵌入页面的滑动选择器</View>

@@ -17,7 +17,7 @@ export default class NavigatorBtn extends Component {
       <View
         className='demo-goto-btn'
         onClick={this.handleGoto.bind(this, parent, name)}
-      >More Info</View>
+      >查看详情</View>
     )
   }
 }

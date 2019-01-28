@@ -72,15 +72,15 @@ view {
       position: relative;
       display: inline-block;
       padding: 12px 24px;
-      color: #fff;
+      color: $color-brand-light;
       font-size: 28px;
       text-align: center;
       border-radius: 8px;
-      background: $color-brand-light;
+      border: 1PX solid $color-brand-light;
       overflow: hidden;
 
       &:active {
-        opacity: 0.8;
+        opacity: 0.6;
       }
     }
   }

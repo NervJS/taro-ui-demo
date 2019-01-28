@@ -17,13 +17,17 @@
 }
 
 .example-item--border {
-  /* prettier-ignore */
   border: 1PX solid #e2ecf4;
   border-left: none;
   border-right: none;
 
   .normal {
-    // padding: 0 24px;
     line-height: 88px;
+  }
+}
+
+.panel__content {
+  + .panel__content.panel__content--progress {
+    margin-top: 56px;
   }
 }

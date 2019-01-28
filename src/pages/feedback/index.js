@@ -125,14 +125,14 @@ export default class FeedbackPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='Feedback' desc='7 components'></DocsHeader>
+        <DocsHeader title='操作反馈' desc='7 个组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
           {/* ActionSheet */}
           <View className='panel'>
-            <View className='panel__title'>ActionSheet</View>
+            <View className='panel__title'>ActionSheet 动作面板</View>
             <View className='panel__content'>
               {/* 无 Title */}
               <View className='example-item'>
@@ -153,7 +153,7 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* Message */}
           <View className='panel'>
-            <View className='panel__title'>ActionSheet</View>
+            <View className='panel__title'>Message 消息通知</View>
             <View className='panel__content'>
               <View className='example-item'>
                 {/* 普通提示 */}
@@ -184,7 +184,7 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* Modal */}
           <View className='panel'>
-            <View className='panel__title'>Modal</View>
+            <View className='panel__title'>Modal 模态框</View>
             <View className='panel__content'>
               {/* 基础模态框 */}
               <View className='example-item'>
@@ -210,7 +210,7 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* Toast */}
           <View className='panel'>
-            <View className='panel__title'>Toast</View>
+            <View className='panel__title'>Toast 轻提示</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='demo-btn' onClick={this.handleToastClick.bind(this, '文本内容', '', '', false, '')}>文本 Toast</View>
@@ -238,9 +238,9 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* Progress */}
           <View className='panel'>
-            <View className='panel__title'>Progress</View>
-            <View className='panel__content'>
-              {/* 基础进度条 */}
+            <View className='panel__title'>Progress 进度条</View>
+            {/* 基础进度条 */}
+            <View className='panel__content panel__content--progress'>
               <View className='example-item__desc'>基础进度条</View>
               <View className='example-item'>
                 <AtProgress percent={25} />
@@ -251,8 +251,10 @@ export default class FeedbackPage extends Taro.Component {
               <View className='example-item'>
                 <AtProgress percent={75} />
               </View>
+            </View>
 
-              {/* 隐藏进度文案 */}
+            {/* 隐藏进度文案 */}
+            <View className='panel__content panel__content--progress'>
               <View className='example-item__desc'>隐藏进度文案</View>
               <View className='example-item'>
                 <AtProgress percent={25} isHidePercent />
@@ -260,8 +262,10 @@ export default class FeedbackPage extends Taro.Component {
               <View className='example-item'>
                 <AtProgress percent={75} isHidePercent />
               </View>
+            </View>
 
-              {/* 不同的状态 */}
+            {/* 不同的状态 */}
+            <View className='panel__content panel__content--progress'>
               <View className='example-item__desc'>不同的状态</View>
               <View className='example-item'>
                 <View className='example-item__desc'>暂停</View>
@@ -284,7 +288,7 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* SwipeAction */}
           <View className='panel'>
-            <View className='panel__title'>SwipeAction</View>
+            <View className='panel__title'>SwipeAction 滑动操作</View>
             <View className='panel__content'>
               <View className='example-item example-item--border'>
                 <AtSwipeAction onClick={this.handleSwipeClick} options={OPTIONS}>
@@ -296,7 +300,7 @@ export default class FeedbackPage extends Taro.Component {
 
           {/* Activity Indicator */}
           <View className='panel'>
-            <View className='panel__title'>Activity Indicator</View>
+            <View className='panel__title'>Activity Indicator 活动指示器</View>
             <View className='panel__content'>
               {/* 自定义尺寸 */}
               <View className='example-item'>

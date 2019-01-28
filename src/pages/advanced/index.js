@@ -25,23 +25,23 @@ export default class BasicPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='Advanced' desc='1 component'></DocsHeader>
+        <DocsHeader title='高阶' desc='日历组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
           {/* Calendar */}
           <View className='panel'>
-            <View className='panel__title'>Calendar</View>
+            <View className='panel__title'>Calendar 日历</View>
             <View className='panel__content'>
               {/* 一般案例 */}
-              <View className='example-item'>
+              <View className='example-item example-item--calendar'>
                 <View className='example-item__desc'>一般案例</View>
                 <AtCalendar />
               </View>
 
               {/* 范围选择 */}
-              <View className='example-item'>
+              <View className='example-item example-item--calendar'>
                 <View className='example-item__desc'>范围选择</View>
                 <AtCalendar isMultiSelect currentDate={this.state.multiCurentDate} />
               </View>

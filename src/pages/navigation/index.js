@@ -75,14 +75,14 @@ export default class NavigationPage extends Taro.Component {
     return (
       <View className='page'>
         {/* S Header */}
-        <DocsHeader title='Navigation' desc='7 component'></DocsHeader>
+        <DocsHeader title='导航' desc='7 个组件'></DocsHeader>
         {/* E Header */}
 
         {/* S Body */}
         <View className='doc-body'>
           {/* NavBar */}
           <View className='panel'>
-            <View className='panel__title'>NavBar</View>
+            <View className='panel__title'>NavBar 导航栏</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <AtNavBar
@@ -97,7 +97,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* TabBar */}
           <View className='panel'>
-            <View className='panel__title'>TabBar</View>
+            <View className='panel__title'>TabBar 标签栏</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <AtTabBar tabList={tabbarList} onClick={this.handleTabBarClick.bind(this)} current={this.state.tabbarCurrent} />
@@ -107,7 +107,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* Tabs */}
           <View className='panel'>
-            <View className='panel__title'>Tabs</View>
+            <View className='panel__title'>Tabs 标签页</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='example-item__desc'>水平标签页</View>
@@ -161,7 +161,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* SegmentedControl */}
           <View className='panel'>
-            <View className='panel__title'>SegmentedControl</View>
+            <View className='panel__title'>SegmentedControl 分段器</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <AtSegmentedControl onClick={this.handleSegmenentedClick.bind(this)} current={segmentedValue} values={segmentedList} />
@@ -172,7 +172,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* Pagination */}
           <View className='panel'>
-            <View className='panel__title'>Pagination</View>
+            <View className='panel__title'>Pagination 分页器</View>
             <View className='panel__content no-padding'>
               <View className='example-item'>
                 <View className='example-item__desc'>基础</View>
@@ -188,7 +188,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* Drawer */}
           <View className='panel'>
-            <View className='panel__title'>Drawer</View>
+            <View className='panel__title'>Drawer 抽屉</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <View className='demo-btn' onClick={this.leftDrawerClick.bind(this)}>左边滑出</View>
@@ -200,7 +200,7 @@ export default class NavigationPage extends Taro.Component {
 
           {/* Indexes */}
           <View className='panel'>
-            <View className='panel__title'>Indexes</View>
+            <View className='panel__title'>Indexes 索引选择器</View>
             <View className='panel__content'>
               <View className='example-item'>
                 <NavigatorBtn parent='navigation' name='indexes'></NavigatorBtn>
