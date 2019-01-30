@@ -108,7 +108,7 @@
     align-items: center;
     justify-content: space-between;
     height: 120px;
-    @include hairline-bottom();
+    @include hairline-bottom(#78A4F4);
 
     .name {
       color: #1d1d26;
