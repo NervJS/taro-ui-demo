@@ -1,16 +1,6 @@
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
-
 import logoImg from '../../assets/images/logo_taro.png'
-import iconBasic from '../../assets/images/icon-list-basic.png'
-import iconView from '../../assets/images/icon-list-view.png'
-import iconAction from '../../assets/images/icon-list-action.png'
-import iconForm from '../../assets/images/icon-list-form.png'
-import iconLayout from '../../assets/images/icon-list-layout.png'
-import iconNavigation from '../../assets/images/icon-list-navigation.png'
-import iconHOC from '../../assets/images/icon-list-hoc.png'
-
 import './index.scss'
 
 export default class Index extends Taro.Component {
@@ -26,43 +16,36 @@ export default class Index extends Taro.Component {
         {
           id: 'Basic',
           title: '基础',
-          content: '包含颜色、文本、图标等',
-          icon: iconBasic
+          content: '按钮组件',
         },
         {
           id: 'View',
           title: '视图',
-          content: '包含通告栏、标签、徽标等',
-          icon: iconView
+          content: '通告栏等8个组件',
         },
         {
-          id: 'Action',
+          id: 'Feedback',
           title: '操作反馈',
-          content: '包含对话框、进度条、动作面板等',
-          icon: iconAction
+          content: '对话框等7个组件',
         },
         {
-          id: 'Form',
-          title: '表单',
-          content: '包含输入框、单选框、复选框等',
-          icon: iconForm
+          id: 'Data-entry',
+          title: '数据录入',
+          content: '输入框等13个组件',
         },
         {
           id: 'Layout',
           title: '布局',
-          content: '包含列表、浮层、卡片等',
-          icon: iconLayout
+          content: '列表等6个组件',
         },
         {
           id: 'Navigation',
           title: '导航',
-          content: '包含标签栏、导航栏、分段器等',
-          icon: iconNavigation
+          content: '标签栏等7个组件',
         }, {
           id: 'Advanced',
-          title: '高阶组件',
-          content: '包含日历等',
-          icon: iconHOC
+          title: '高阶',
+          content: '日历组件',
         }
       ]
     }
@@ -79,7 +62,8 @@ export default class Index extends Taro.Component {
   gotoPanel = e => {
     const { id } = e.currentTarget.dataset
     Taro.navigateTo({
-      url: `/pages/panel/index?id=${id.toLowerCase()}`
+      // url: `/pages/panel/index?id=${id.toLowerCase()}`
+      url: `/pages/${id.toLowerCase()}/index`
     })
   }
 
@@ -102,16 +86,8 @@ export default class Index extends Taro.Component {
               data-list={item.subpages}
               onClick={this.gotoPanel}
             >
-              <View className='module-list__icon'>
-                <Image src={item.icon} className='img' mode='widthFix' />
-              </View>
-              <View className='module-list__info'>
-                <View className='title'>{item.title}</View>
-                <View className='content'>{item.content}</View>
-              </View>
-              <View className='module-list__arrow'>
-                <AtIcon value='chevron-right' />
-              </View>
+              <View className='module-list__item-title'>{item.title}</View>
+              <View className='module-list__item-content'>{item.content}</View>
             </View>
           ))}
         </View>

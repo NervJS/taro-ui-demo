@@ -1,15 +1,17 @@
+@import "../../assets/css/theme.scss";
+
 .page {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #FDFDFD;
 
-  view {
+  view,
+  div {
     box-sizing: border-box;
   }
 }
 
 .page-index {
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding: 60px 0 30px;
 
   .logo {
     margin: 0 auto;
@@ -25,80 +27,55 @@
 
   .page-title {
     margin-top: 24px;
-    color: #333;
+    color: #474747;
     font-size: 36px;
+    font-weight: bold;
     text-align: center;
   }
 
   .module-list {
-    margin-top: 72px;
     display: flex;
-    flex-direction: column;
+    margin: 72px 40px 50px;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__item {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 40px;
-      padding: 0 30px;
-      width: 90%;
-      height: 144px;
+      position: relative;
+      margin-bottom: 30px;
+      padding: 40px;
+      width: 320px;
       background: #fff;
       box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.04);
       border-radius: 10px;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &__icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 70px;
-      height: 70px;
-      color: #78A4FA;
-      text-align: center;
-      border: 5px solid rgba(120, 164, 250, 0.16);
-      border-radius: 50%;
-
-      .img {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: block;
         width: 30px;
-        height: 30px;
+        height: 8px;
+        border-radius: 4px;
+        background: $color-brand-light;
+        box-shadow: 2px 2px 4px 0 rgba($color: $color-brand-light, $alpha: 0.5);
       }
-    }
 
-    &__info {
-      flex: 1;
-      text-align: left;
-      margin-left: 24px;
-
-      .title {
-        color: #6A6A77;
-        font-size: 28px;
+      &-title {
+        margin-top: 70px;
+        color: #484848;
+        font-size: 38px;
         font-weight: bold;
+        line-height: 1.2;
       }
 
-      .content {
-        color: #88889C;
-        font-size: 22px;
+      &-content {
+        margin-top: 12px;
+        color: #A09EAE;
+        font-size: 24px;
+        line-height: 1.5;
       }
-    }
-
-    &__arrow {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 62px;
-      height: 62px;
-      color: #fff;
-      text-align: center;
-      background: #78A4FA;
-      box-shadow: 4px 10px 30px 0 rgba(120, 164, 250, 0.30);
-      border-radius: 50%;
     }
   }
 }
