@@ -1,12 +1,8 @@
 # Taro UI Demo
 
-`Taro UI` 示例库
+使用 Taro UI 的示例
 
-## 体验
-
-请使用微信扫一扫以下体验码
-
-![QRCode](https://user-images.githubusercontent.com/1240899/44580574-fe838800-a7cc-11e8-890d-73cf048ef8c2.jpg)
+> 该仓库不是 Taro UI 示例小程序的源码，源码请查看 https://github.com/NervJS/taro-ui/blob/dev/src/app.js
 
 ## 相关链接
 
