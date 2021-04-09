@@ -2,7 +2,7 @@
 
 使用 Taro UI 的示例
 
-> 该仓库不是 Taro UI 示例小程序的源码，源码请查看 https://github.com/NervJS/taro-ui/blob/dev/src/app.js
+> 该仓库不是 Taro UI 示例小程序的源码，源码请查看 https://github.com/NervJS/taro-ui/blob/next/packages/taro-ui-demo
 
 ## 相关链接
 
